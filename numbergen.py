@@ -164,7 +164,8 @@ def get_possible_numbers ( language_base_data ):
 	return all_possibilities
 
 
-german_base_data = '''@A: %%A%%
+german_base_data = '''
+@A: %%A%%
 @11: elf
 @12: zwölf
 @16: sechzehn
@@ -204,7 +205,8 @@ german_base_data = '''@A: %%A%%
 [6]xx: sechshundert
 [7]xx: siebenhundert
 [8]xx: achthundert
-[9]xx: neunhundert'''
+[9]xx: neunhundert
+'''
 
 english_base_data = '''
 @Z: %%Z%%
