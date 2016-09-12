@@ -241,36 +241,3 @@ english_base_data = '''
 [8]x: eighty
 [9]x: ninety
 '''
-
-base_data = english_base_data
-
-print( get_number_name( base_data, 1 ) )
-print( get_number_name( base_data, 13 ) )
-print( get_number_name( base_data, 11 ) )
-print( get_number_name( base_data, 10 ) )
-print( get_number_name( base_data, 20 ) )
-print( get_number_name( base_data, 30 ) )
-print( get_number_name( base_data, 40 ) )
-print( get_number_name( base_data, 50 ) )
-print( get_number_name( base_data, 100 ) )
-print( get_number_name( base_data, 200 ) )
-print( get_number_name( base_data, 300 ) )
-print( get_number_name( base_data, 400 ) )
-print( get_number_name( base_data, 345 ) )
-print( get_number_name( base_data, 3452 ) )
-print( get_number_name( base_data, 3455 ) )
-print( get_number_name( base_data, 13455 ) )
-print( get_number_name( german_base_data, 99999 ) )
-
-print('eng.')
-chain = get_numberchain( english_base_data, 1337, [] )
-chain.reverse()
-print( ' => '.join( chain ) )
-print('ger.')
-chain = get_numberchain( german_base_data, 1337, [] )
-chain.reverse()
-print( ' => '.join( chain ) )
-
-all_possible_german_numbers = get_possible_numbers( german_base_data )
-print( min( all_possible_german_numbers ) )
-print( max( all_possible_german_numbers ) )

@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>Hello</title>
+		<link rel="stylesheet" type="text/css" href="/entireframework.min.css" />
+	</head>
+	<body>
+		<main>
+			<div class="row">
+				<div class="col c1">&nbsp;</div>
+				<div class="col c10">
+					<py:if test="lang_base">
+						<h1>Used Language Data:</h1>
+						<pre>${lang_base}</pre>
+						<h1>Example Numbers</h1>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>
+										Integer
+									</th>
+									<th>
+										String
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr py:for="int in sorted( example_numbers.keys() )">
+									<td>
+										${int}
+									</td>
+									<td>
+										${example_numbers[int]}
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</py:if><py:else>
+						<h1>No lang base used</h1>
+						<form action="" method="post">
+							<textarea name="lang" cols="100" rows="40" style="width: 100%">@Z: %%Z%%
+@11: eleven
+@12: twelve
+@13: thirteen
+@15: fifteen
+@1Z: %%Z%%teen
+@Y0: %%Y%%
+@YZ: %%Y%%%%Z%%
+@X: [X]hundred
+@X0Z: [X]hundred and [Z]
+@XYZ: [X]hundred[YZ]
+@WXYZ: [W]thousand[XYZ]
+@VWXYZ: [VW]thousand[XYZ]
+[0]: nought
+[1]: one
+[2]: two
+[3]: three
+[4]: four
+[5]: five
+[6]: six
+[7]: seven
+[8]: eight
+[9]: nine
+[1]x: ten
+[2]x: twenty
+[3]x: thirty
+[4]x: fourty
+[5]x: fifty
+[6]x: sixty
+[7]x: seventy
+[8]x: eighty
+[9]x: ninety</textarea><br/>
+							<input type="submit" value="use english lang base" />
+						</form>
+					</py:else>
+				</div>
+				<div class="col c1">&nbsp;</div>
+			</div>
+		</main>
+	</body>
+</html>
